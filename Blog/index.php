@@ -1,78 +1,56 @@
-
 <!DOCTYPE html>
 <html>
+<body>
 <head>
-	<link href="sb.svg" rel="shortcut icon" type="image/x-icon">
-	<title>Советы школьника</title>
-	<style type="text/css">
-		body {
-			background-color: white;
-		}
-		.menu
-		{
-			border-radius: 15px;
-		}
-		.table {
-			background-color: #FFF;
-			color: black;
-		}
-		.a_href {
-			color:green;
-		}
-	</style>
+<link href="static/img/photo.ico" rel="icon" type="image/x-icon">
+<title>Блог Школьник Good</title>
+<link rel="stylesheet" type="text/css" href="style-themes.css">
+<style type="text/css">
+.site-footer {
+  	display: inline-flex;
+  	justify-content: space-between;
+  	color: #999999;
+	}
+body {
+  	padding: 0;
+  	font-size: 14px;
+  	line-height: 18px;
+  	color: #000000;
+  	font-family: "Source Sans Pro", "Arial", sans-serif;
+ 	}
+.header-h1 {
+    	position: relative;
+    	margin-bottom: .5rem;
+    	text-align: center; }
+</style>
 </head>
-<body id = 'z'>
 <center>
-<table align="center" width="90%" >
-	<tr>
-		<td class="table">
-			<img src="/static/img/rebenok.gif" width="10%">
-		</td>
-		<td class="table">
-			<center>
-				<font color="#990" size="5%">Советы Школьника</font>
-			</center>
-		</td>
-	</tr>
-</table>
+      <header>
+      	<div class="header-h1">
+      	<p><img src="static/img/u_ajax.png" width="150" height="150"></p>
+      </header> 
 <hr>
-<table class="table" border="0" width="90%">
-	<tr>
-		<td align="right" width="20%" >
-			<a class='a_href' href= "index.php">Главная страница</a>
-			
-			<a class='a_href' href='?page=lx&page_id=1'>Лайфхаки для школы</a>
-
-			<a class='a_href' href='?page=python_calc'>Калькутор на Python</a>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
+<div>
+<table width="90%">
+<tr>
+	<td align="right" width="20%" >
+		<h3 id='titl'>Категории</h3>
+		<a class='a_href' href= "index.php">Главная страница</a>
+		<a class='a_href' href='?page=lx&page_id=1'>Как стать отличником?</a>
+		<a class='a_href' href='?page=python_calc'>Калькутор на Python</a>
+		<a class='a_href' href="?page=prog">HTML codding</a>	
 		</td>
 		<td valign="top" style = "padding: 30px">
+ 		</div>
 
-
-<!-- ######################################## -->
-<!-- СЮДА СОДЕРЖИМОЕ СТРАНИЦЫ -->
-<!-- ######################################## -->
-
-	<?php
+	<!-- PHP -->
+	 <?php
 		$page = "";
 		if (empty($_GET['page']))
 		{
 			$page = 'index';
+		
+			
 		}
 		else
 		{
@@ -80,23 +58,18 @@
 		}
 		include('pages/'.$page.".php");
 	?>
-
-<!-- ######################################## -->
-<!-- КОНЕЦ СОДЕРЖИМОГО СТРАНИЦЫ -->
-<!-- ######################################## -->
-
 </td>
 </tr>
 </table>
-
-<table width="90%" class ="table" >
-	<tr>
-		<td style = "padding: 10px; border-radius: 15px" align="center" >
-			Developer by <a href = 'https://vk.com/val3kxd' class="a_href" target="_blank">Виктор Гагарин</a>
-		</td>
-	</tr>
-</table>
-
-</center>
+<!-- Цитата -->
+<blockquote>
+  	<p>Единственное счастье в жизни — это постоянное стремление вперед.</p>
+  	<footer>— <cite>Эмиль Золя</cite></footer>
+</blockquote>
+ <footer class="site-footer">
+        <p>© Виктор, 2022</p>
+      </footer>
+</center> 
 </body>
 </html>
+
